@@ -1,0 +1,3 @@
+ClientUsername,AMUsername,Action
+cl.username1,am.username1,Assign
+cl.username2,am.username2,Unassign

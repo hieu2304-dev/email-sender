@@ -1,0 +1,4 @@
+ClientUserName[Required],ClientMobile[Required],FirstName,LastName,JobTitle,EmailAddress,ExternalCompanyID,OrganizationalUnit,Language-ISOcode,Tags,Country-ISO-code
+sample.client1,85298765432,Sample,Client,IT,sample.client1@sample.com,EC1,OU1;OU2,en,tag1;tag2,US
+sample.client2,85298765433,Sample,Client,IT,sample.client2@sample.com,EC1,OU1;OU2,zh_HK,tag1;tag2,HK
+sample.client3,85298765434,Sample,Client,IT,sample.client2@sample.com,EC1,OU1;OU2,zh_CN,tag1;tag2,CN

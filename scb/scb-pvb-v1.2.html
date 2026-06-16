@@ -1,0 +1,762 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Wechat integration instructions</title>
+</head>
+
+<body style="margin: 0; padding: 0; background-color: #ffffff; font-family: Arial">
+  <center>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td style="
+              width: 590px;
+              height: 431px;
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 17px;
+              letter-spacing: 0.5px;
+              text-align: left;
+              color: #525355;
+              border-radius: 8px;
+              padding: 0;
+            " align="center" height="100%" valign="top" width="100%">
+          <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+            <tr>
+              <td align="center" valign="top" width="600">
+
+                <!-- Header Banner -->
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px">
+                  <tbody>
+                    <tr>
+                      <td colspan="2" align="center" valign="top">
+                        <a href="https://www.sc.com/en/" target="_blank">
+                          <img
+                            src="{{arrow.top}}"
+                            width="100%" style="margin-bottom: 20px; padding: 0; border: none; display: block;" border="0" />
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <!-- ENGLISH SECTION -->
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px">
+                  <tbody>
+                    <tr>
+                      <td style="font-weight: 700; line-height: 1.44; padding-top: 20px; padding-right: 20px; padding-left: 20px;" align="left" valign="top">
+                        Dear {{recipient.displayName}},
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding-top: 20px; padding-right: 20px; padding-left: 20px;" align="left" valign="top">
+                        We are excited to announce that our communication channels have been expanded to better serve
+                        you and make your banking experience more convenient.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding-top: 20px; padding-right: 20px; padding-left: 20px;" align="left" valign="top">
+                        You can now reach your Private Banker through the instant messaging app <b>WeChat</b>, giving
+                        you an easy and smooth way to discuss your needs, explore opportunities, and get the support
+                        you need.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding-top: 30px" align="left" valign="top">
+                        <table width="100%" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td align="center" style="padding: 16px; font-weight: 700; font-size: 14px; color: #fff; background-color: #282d32;">
+                              <b>To start using WeChat for communication, follow these simple steps:</b>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="top">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+
+                          <!-- Step 1 -->
+                          <tr>
+                            <td style="padding: 24px 0; border-bottom: 1px solid #d3d3d3;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="padding: 0 20px; font-size: 16px; line-height: 1.5;" valign="middle">
+                                    <b style="font-size: 20px;">1.</b> <b>Open WeChat</b> on your mobile device and <b>tap the + icon</b> in the top
+                                      right corner, followed by <b>Scan</b>.
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <!-- Step 2 -->
+                          <tr>
+                            <td style="padding: 24px 0; border-bottom: 1px solid #d3d3d3;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="padding: 0 20px; font-size: 16px; line-height: 1.5;" valign="middle">
+                                    <b style="font-size: 20px;">2.</b> <b>Scan the QR code</b> below to follow our official WeChat Service account,
+                                      <b>Standard Chartered Instant Messaging</b>.
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 12px">
+                                      <tr>
+                                        <td width="110" valign="middle">
+                                          <img src="{{wechat.qrcode}}" width="100px" height="100px" style="margin: 0; padding: 0; border: none;" border="0" alt="QR Code" />
+                                        </td>
+                                        <td valign="middle" style="padding-right: 40px">
+                                          <p>
+                                            <i>Please note that the QR code expires in
+                                              {{#wechat.qrcode.expiration.in_days}}<span>{{wechat.qrcode.expiration.in_days}}{{#wechat.qrcode.expiration.in_days.plural}} days{{/wechat.qrcode.expiration.in_days.plural}}{{^wechat.qrcode.expiration.in_days.plural}} day{{/wechat.qrcode.expiration.in_days.plural}}</span>{{/wechat.qrcode.expiration.in_days}}{{#wechat.qrcode.expiration.in_days}}{{#wechat.qrcode.expiration.in_hours}}<span> and </span>{{/wechat.qrcode.expiration.in_hours}}{{/wechat.qrcode.expiration.in_days}}{{#wechat.qrcode.expiration.in_hours}}<span>{{wechat.qrcode.expiration.in_hours}}{{#wechat.qrcode.expiration.in_hours.plural}} hours{{/wechat.qrcode.expiration.in_hours.plural}}{{^wechat.qrcode.expiration.in_hours.plural}} hour{{/wechat.qrcode.expiration.in_hours.plural}}</span>{{/wechat.qrcode.expiration.in_hours}}{{#wechat.qrcode.expiration.in_minutes}}<span> {{wechat.qrcode.expiration.in_minutes}}{{#wechat.qrcode.expiration.in_minutes.plural}} minutes{{/wechat.qrcode.expiration.in_minutes.plural}}{{^wechat.qrcode.expiration.in_minutes.plural}} minute{{/wechat.qrcode.expiration.in_minutes.plural}}</span>{{/wechat.qrcode.expiration.in_minutes}}.
+                                              If it has expired, please contact your Private Banker for assistance.
+                                            </i>
+                                          </p>
+                                  </td>
+                                </tr>
+                              </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <!-- Step 3 -->
+                          <tr>
+                            <td style="padding: 24px 0; border-bottom: 1px solid #d3d3d3;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="padding: 0 20px; font-size: 16px; line-height: 1.5;" valign="middle">
+                                    <b style="font-size: 20px;">3.</b> Click on <b>'Follow service account'</b>.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="padding: 12px 20px 0;">
+                                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td width="33%" valign="top">
+                                        <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3acb4fe6bb3f0ccaa5e7.png" width="100%" style="display: block;" border="0" alt="" />
+                                      </td>
+                                      <td width="67%" valign="top"></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <!-- Step 4 -->
+                          <tr>
+                            <td style="padding: 24px 0; border-bottom: 1px solid #d3d3d3;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="padding: 0 20px; font-size: 16px; line-height: 1.5;" valign="middle">
+                                    <b style="font-size: 20px;">4.</b> On the service account screen, you will be shown a disclaimer message and would
+                                      receive a one-time password (OTP) in your registered email. Enter the OTP
+                                      within 180 seconds to proceed.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="padding: 12px 20px 0;">
+                                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td width="33%" valign="top">
+                                        <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3b284fe6bb3f0ccaa5f5.png" width="100%" style="display: block;" border="0" alt="" />
+                                      </td>
+                                      <td width="67%" valign="top"></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <!-- Step 5 -->
+                          <tr>
+                            <td style="padding: 24px 0; border-bottom: 1px solid #d3d3d3;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="padding: 0 20px; font-size: 16px; line-height: 1.5;" valign="middle">
+                                    <b style="font-size: 20px;">5.</b> Upon successful authentication, you will receive a message in WeChat Service
+                                      account to await a verification call from your Private Banker.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="padding: 12px 20px 0;">
+                                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td width="33%" valign="top">
+                                        <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3b214fe6bb3f0ccaa5f4.png" width="100%" style="display: block;" border="0" alt="" />
+                                      </td>
+                                      <td width="67%" valign="top"></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <!-- Step 6 -->
+                          <tr>
+                            <td style="padding: 24px 24px 24px 0; border-bottom: 1px solid #d3d3d3;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="padding: 0 20px; font-size: 16px; line-height: 1.5;" valign="middle">
+                                    <b style="font-size: 20px;">6.</b> Once the callback verification has been successfully completed, you may begin
+                                      messaging your Private Banker through the <b>Standard Chartered WeChat MiniApp</b>.
+                                      You can open WeChat, navigate to the Service Account, select the 'Mini Program'
+                                      and access your chat with your Private Banker.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="padding: 12px 20px 0;">
+                                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td width="33%" valign="top">
+                                        <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3b1b4fe6bb3f0ccaa5f3.png" width="100%" style="display: block;" border="0" alt="" />
+                                      </td>
+                                      <td width="67%" valign="top"></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="padding: 12px 20px 0; font-size: 16px; line-height: 1.5;">
+                                    Alternatively, if you are already on the Service Account screen, a notification
+                                    card will appear to help you navigate to the mini program chat with your Private
+                                    Banker.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="padding: 12px 20px 0;">
+                                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td width="33%" valign="top">
+                                        <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3b154fe6bb3f0ccaa5f2.png" width="100%" style="display: block;" border="0" alt="" />
+                                      </td>
+                                      <td width="67%" valign="top"></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                        </table>
+                      </td>
+                    </tr>
+
+                    <!-- Stay Connected Section -->
+                    <tr>
+                      <td style="padding-top: 30px" align="left" valign="top">
+                        <table width="100%" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td align="center" style="padding: 16px; font-weight: 700; font-size: 14px; color: #fff; background-color: #282d32;">
+                              <b>Stay connected by switching on your WeChat Service notification:</b>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="top">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+
+                          <!-- Notification Step 1 -->
+                          <tr>
+                            <td style="padding: 24px 0; border-bottom: 1px solid #d3d3d3;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td valign="top" style="padding-left: 20px; padding-right: 20px; font-size: 16px; line-height: 1.5;">
+                                    <p style="margin: 5px 0"><b>Step 1:</b> Open WeChat and click on <b>"Service Accounts"</b>.</p>
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 12px;">
+                                      <tr>
+                                        <td width="33%" valign="top">
+                                          <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3b0f4fe6bb3f0ccaa5f1.png" width="100%" style="display: block;" border="0" alt="" />
+                                        </td>
+                                        <td width="67%" valign="top"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <!-- Notification Step 2 -->
+                          <tr>
+                            <td style="padding: 24px 0; border-bottom: 1px solid #d3d3d3;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td valign="top" style="padding-left: 20px; padding-right: 20px; font-size: 16px; line-height: 1.5;">
+                                    <p style="margin: 5px 0"><b>Step 2:</b> Click on the <b>profile icon</b>, then select <b>"Followed Service Accounts"</b> to view all accounts you are connected to.</p>
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 12px;">
+                                      <tr>
+                                        <td width="33%" style="padding-right: 4px;" valign="top">
+                                          <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3b084fe6bb3f0ccaa5f0.png" width="100%" style="display: block;" border="0" alt="" />
+                                        </td>
+                                        <td width="33%" valign="top">
+                                          <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3b024fe6bb3f0ccaa5ef.png" width="100%" style="display: block;" border="0" alt="" />
+                                        </td>
+                                        <td width="34%" valign="top"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <!-- Notification Step 3 -->
+                          <tr>
+                            <td style="padding: 24px 0; border-bottom: 1px solid #d3d3d3;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td valign="top" style="padding-left: 20px; padding-right: 20px; font-size: 16px; line-height: 1.5;">
+                                    <p style="margin: 5px 0"><b>Step 3:</b> From the list, select the <b>Standard Chartered Instant Messaging</b> Service Account, and open its profile.</p>
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 12px;">
+                                      <tr>
+                                        <td width="33%" style="padding-right: 4px;" valign="top">
+                                          <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3afa4fe6bb3f0ccaa5ee.png" width="100%" style="display: block;" border="0" alt="" />
+                                        </td>
+                                        <td width="33%" valign="top">
+                                          <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3aee4fe6bb3f0ccaa5ed.png" width="100%" style="display: block;" border="0" alt="" />
+                                        </td>
+                                        <td width="34%" valign="top"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <!-- Notification Step 4 -->
+                          <tr>
+                            <td style="padding: 24px 24px 24px 0;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td valign="top" style="padding-left: 20px; padding-right: 20px; font-size: 16px; line-height: 1.5;">
+                                    <p style="margin: 5px 0"><b>Step 4:</b> Click on the <b>three dots menu</b> at the top right, go to <b>Settings</b>, and ensure the <b>"Mute Notifications"</b> option is turned off.</p>
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 12px;">
+                                      <tr>
+                                        <td width="33%" style="padding-right: 4px;" valign="top">
+                                          <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3ae14fe6bb3f0ccaa5ec.png" width="100%" style="display: block;" border="0" alt="" />
+                                        </td>
+                                        <td width="33%" style="padding-right: 4px;" valign="top">
+                                          <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3adb4fe6bb3f0ccaa5eb.png" width="100%" style="display: block;" border="0" alt="" />
+                                        </td>
+                                        <td width="34%" valign="top">
+                                          <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3ad24fe6bb3f0ccaa5e8.png" width="100%" style="display: block;" border="0" alt="" />
+                                        </td>
+                                      </tr>
+                                    </table>
+                                    <p style="margin: 12px 0 5px 0">Once this is disabled, you will start receiving message notifications.</p>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="padding-top: 20px; padding-right: 20px; padding-left: 20px;" align="left" valign="top">
+                        <p style="margin-top: 8px">
+                          For any questions or assistance, please contact your Private Banker. We look forward to
+                          connecting with you via this new channel.
+                        </p>
+                        <p style="padding-top: 20px"></p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <!-- CHINESE SECTION -->
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px">
+                  <tbody>
+                    <tr style="background-color: #e4e4e5">
+                      <td style="text-align: left; padding-top: 20px">
+                        <p style="padding-top: 20px; color: #525355; font-size: 22px; line-height: 24px; padding: 0 20px;">
+                          拓展沟通渠道，为您提供更优质的服务
+                        </p>
+                      </td>
+                    </tr>
+                    <tr style="background-color: #e4e4e5">
+                      <td style="font-weight: 700; line-height: 1.44; padding-top: 20px; padding-right: 20px; padding-left: 20px;" align="left" valign="top">
+                        尊敬的 {{recipient.displayName}},
+                      </td>
+                    </tr>
+                    <tr style="background-color: #e4e4e5">
+                      <td style="padding-top: 20px; padding-right: 20px; padding-left: 20px;" align="left" valign="top">
+                        为进一步提升您的银行服务体验，并为您提供更便捷高效的服务，我们现已拓展全新的沟通渠道。
+                      </td>
+                    </tr>
+                    <tr style="background-color: #e4e4e5">
+                      <td style="padding-top: 20px; padding-right: 20px; padding-left: 20px;" align="left" valign="top">
+                        您可通过即时通讯软件<b>微信</b>联系您的私人银行客户经理，随时与我们沟通您的需求，探讨财富机遇，并获得专属支持。请参考以下简易步骤操作，开始使用微信与我们沟通：
+                        <div style="padding-top: 20px"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="top">
+                        <table width="100%" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td align="center" style="padding: 16px; font-weight: 700; font-size: 14px; color: #fff; background-color: #282d32;">
+                              使用微信沟通，请参考以下简易步骤操作:
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="top">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+
+                          <!-- ZH Step 1 -->
+                          <tr>
+                            <td style="padding: 24px 0; border-bottom: 1px solid #d3d3d3;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="padding: 0 20px; font-size: 16px; line-height: 1.5;" valign="middle">
+                                    <b style="font-size: 20px;">1.</b> 在您的手机上<b>打开微信</b>，点击右上角的<b>"+"</b>图标，然后选择<b>"扫一扫"</b>。
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <!-- ZH Step 2 -->
+                          <tr>
+                            <td style="padding: 24px 0; border-bottom: 1px solid #d3d3d3;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="padding: 0 20px; font-size: 16px; line-height: 1.5;" valign="middle">
+                                    <b style="font-size: 20px;">2.</b> <b>扫描下方二维码</b>，关注我们的官方微信账号 <b>Standard Chartered Instant Messaging</b>.
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 12px">
+                                      <tr>
+                                        <td width="110" valign="middle">
+                                          <img src="{{wechat.qrcode}}" width="100px" height="100px" style="margin: 0; padding: 0; border: none;" border="0" alt="QR Code" />
+                                        </td>
+                                        <td valign="middle" style="padding-right: 40px">
+                                          <p>
+                                            <i>请注意：此二维码将在
+                                              {{#wechat.qrcode.expiration.in_days}}<span>{{wechat.qrcode.expiration.in_days}}{{#wechat.qrcode.expiration.in_days.plural}} days{{/wechat.qrcode.expiration.in_days.plural}}{{^wechat.qrcode.expiration.in_days.plural}} day{{/wechat.qrcode.expiration.in_days.plural}}</span>{{/wechat.qrcode.expiration.in_days}}{{#wechat.qrcode.expiration.in_days}}{{#wechat.qrcode.expiration.in_hours}}<span> and </span>{{/wechat.qrcode.expiration.in_hours}}{{/wechat.qrcode.expiration.in_days}}{{#wechat.qrcode.expiration.in_hours}}<span>{{wechat.qrcode.expiration.in_hours}}{{#wechat.qrcode.expiration.in_hours.plural}} hours{{/wechat.qrcode.expiration.in_hours.plural}}{{^wechat.qrcode.expiration.in_hours.plural}} hour{{/wechat.qrcode.expiration.in_hours.plural}}</span>{{/wechat.qrcode.expiration.in_hours}}{{#wechat.qrcode.expiration.in_minutes}}<span> {{wechat.qrcode.expiration.in_minutes}}{{#wechat.qrcode.expiration.in_minutes.plural}} minutes{{/wechat.qrcode.expiration.in_minutes.plural}}{{^wechat.qrcode.expiration.in_minutes.plural}} minute{{/wechat.qrcode.expiration.in_minutes.plural}}</span>{{/wechat.qrcode.expiration.in_minutes}}分钟后失效。如二维码已失效，请联系您的私人银行客户经理获取协助。
+                                            </i>
+                                          </p>
+                                  </td>
+                                </tr>
+                              </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <!-- ZH Step 3 -->
+                          <tr>
+                            <td style="padding: 24px 0; border-bottom: 1px solid #d3d3d3;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="padding: 0 20px; font-size: 16px; line-height: 1.5;" valign="middle">
+                                    <b style="font-size: 20px;">3.</b> 点击"关注服务账号"。
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="padding: 12px 20px 0;">
+                                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td width="33%" valign="top">
+                                        <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3acb4fe6bb3f0ccaa5e7.png" width="100%" style="display: block;" border="0" alt="" />
+                                      </td>
+                                      <td width="67%" valign="top"></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <!-- ZH Step 4 -->
+                          <tr>
+                            <td style="padding: 24px 0; border-bottom: 1px solid #d3d3d3;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="padding: 0 20px; font-size: 16px; line-height: 1.5;" valign="middle">
+                                    <b style="font-size: 20px;">4.</b> 在服务账号界面，您将看到免责声明信息，并会收到一封包含一次性密码 (OTP) 的电子邮件，该邮件将发送到您注册的邮箱。请在 180 秒内输入 OTP 继续。
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="padding: 12px 20px 0;">
+                                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td width="33%" valign="top">
+                                        <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3b284fe6bb3f0ccaa5f5.png" width="100%" style="display: block;" border="0" alt="" />
+                                      </td>
+                                      <td width="67%" valign="top"></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <!-- ZH Step 5 -->
+                          <tr>
+                            <td style="padding: 24px 0; border-bottom: 1px solid #d3d3d3;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="padding: 0 20px; font-size: 16px; line-height: 1.5;" valign="middle">
+                                    <b style="font-size: 20px;">5.</b> 验证成功后，您将于服务账号内收到一条消息，请耐心等待您的私人银行客户经理致电，以进行第二步的身份验证。
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="padding: 12px 20px 0;">
+                                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td width="33%" valign="top">
+                                        <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3b214fe6bb3f0ccaa5f4.png" width="100%" style="display: block;" border="0" alt="" />
+                                      </td>
+                                      <td width="67%" valign="top"></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <!-- ZH Step 6 -->
+                          <tr>
+                            <td style="padding: 24px 48px 24px 0; border-bottom: 1px solid #d3d3d3;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="padding: 0 20px; font-size: 16px; line-height: 1.5;" valign="middle">
+                                    <b style="font-size: 20px;">6.</b> 待回拨验证<b>回调及验证流程</b>完成后，您即可透通过 "Standard Chartered Wechat "小程序与您的私人银行客户经理沟通。打开微信，进入服务账号，选择"小程序"，即可与您的私人银行客户经理通讯。
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="padding: 12px 20px 0;">
+                                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td width="33%" valign="top">
+                                        <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3b1b4fe6bb3f0ccaa5f3.png" width="100%" style="display: block;" border="0" alt="" />
+                                      </td>
+                                      <td width="67%" valign="top"></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="padding: 12px 20px 0; font-size: 16px; line-height: 1.5;">
+                                    或者，如果您当前已处于"服务账户"界面内，系统将显示一张通知卡，指引您跳转至小程序聊天界面，以便与您的私人银行客户经理沟通。
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="padding: 12px 20px 0;">
+                                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                      <td width="33%" valign="top">
+                                        <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3b154fe6bb3f0ccaa5f2.png" width="100%" style="display: block;" border="0" alt="" />
+                                      </td>
+                                      <td width="67%" valign="top"></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                        </table>
+                      </td>
+                    </tr>
+
+                    <!-- ZH Stay Connected Section -->
+                    <tr>
+                      <td style="padding-top: 30px" align="left" valign="top">
+                        <table width="100%" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td align="center" style="padding: 16px; font-weight: 700; font-size: 14px; color: #fff; background-color: #282d32;">
+                              为保持联系，请启用微信服务通知：
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="top">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+
+                          <!-- ZH Notification Step 1 -->
+                          <tr>
+                            <td style="padding: 24px 0; border-bottom: 1px solid #d3d3d3;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td valign="top" style="padding-left: 20px; padding-right: 20px; font-size: 16px; line-height: 1.5;">
+                                    <p style="margin: 5px 0"><b>步骤 1：</b>打开微信，点击<b>"服务账号"</b>。</p>
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 12px;">
+                                      <tr>
+                                        <td width="33%" valign="top">
+                                          <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3b0f4fe6bb3f0ccaa5f1.png" width="100%" style="display: block;" border="0" alt="" />
+                                        </td>
+                                        <td width="67%" valign="top"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <!-- ZH Notification Step 2 -->
+                          <tr>
+                            <td style="padding: 24px 0; border-bottom: 1px solid #d3d3d3;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td valign="top" style="padding-left: 20px; padding-right: 20px; font-size: 16px; line-height: 1.5;">
+                                    <p style="margin: 5px 0"><b>步骤 2：</b>点击个人资料人像图标，然后选择"已关注的服务账号"以查看您已连接的所有账号。</p>
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 12px;">
+                                      <tr>
+                                        <td width="33%" style="padding-right: 4px;" valign="top">
+                                          <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3b084fe6bb3f0ccaa5f0.png" width="100%" style="display: block;" border="0" alt="" />
+                                        </td>
+                                        <td width="33%" valign="top">
+                                          <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3b024fe6bb3f0ccaa5ef.png" width="100%" style="display: block;" border="0" alt="" />
+                                        </td>
+                                        <td width="34%" valign="top"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <!-- ZH Notification Step 3 -->
+                          <tr>
+                            <td style="padding: 24px 0; border-bottom: 1px solid #d3d3d3;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td valign="top" style="padding-left: 20px; padding-right: 20px; font-size: 16px; line-height: 1.5;">
+                                    <p style="margin: 5px 0"><b>步骤 3：</b>从列表中选择您的渣打银行即时通讯服务账号并打开其账号资料人像图标。</p>
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 12px;">
+                                      <tr>
+                                        <td width="33%" style="padding-right: 4px;" valign="top">
+                                          <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3afa4fe6bb3f0ccaa5ee.png" width="100%" style="display: block;" border="0" alt="" />
+                                        </td>
+                                        <td width="33%" valign="top">
+                                          <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3aee4fe6bb3f0ccaa5ed.png" width="100%" style="display: block;" border="0" alt="" />
+                                        </td>
+                                        <td width="34%" valign="top"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                          <!-- ZH Notification Step 4 -->
+                          <tr>
+                            <td style="padding: 24px 24px 24px 0;">
+                              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td valign="top" style="padding-left: 20px; padding-right: 20px; font-size: 16px; line-height: 1.5;">
+                                    <p style="margin: 5px 0"><b>步骤 4：</b>点击右上角的三点选单图标进入设置，确保"静音通知"选项已关闭。</p>
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top: 12px;">
+                                      <tr>
+                                        <td width="33%" style="padding-right: 4px;" valign="top">
+                                          <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3ae14fe6bb3f0ccaa5ec.png" width="100%" style="display: block;" border="0" alt="" />
+                                        </td>
+                                        <td width="33%" style="padding-right: 4px;" valign="top">
+                                          <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3adb4fe6bb3f0ccaa5eb.png" width="100%" style="display: block;" border="0" alt="" />
+                                        </td>
+                                        <td width="34%" valign="top">
+                                          <img src="https://files-public-fd.hk.leapxloud.com/avatars-default/5e0effa1e063c598e3c37e98/6a2a3ad24fe6bb3f0ccaa5e8.png" width="100%" style="display: block;" border="0" alt="" />
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="padding: 20px 20px 0; font-size: 14px; line-height: 1.6; color: #525355;" align="left" valign="top">
+                        <p style="margin: 0 0 8px 0">关闭"静音通知"此选项后，您将开始收到讯息通知。</p>
+                        <p style="margin: 0 0 8px 0">如有任何疑问或需要进一步帮助，请随时联系您的私人银行客户经理。</p>
+                        <p style="margin: 0 0 8px 0">我们期待通过这一全新沟通渠道，与您保持更紧密、高效的联系。</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="font-weight: 700; font-size: 16px; padding-top: 16px; padding-bottom: 8px; padding-right: 20px; padding-left: 20px;" align="left" valign="top">
+                        Standard Chartered Global Private Bank | 渣打环球私人银行
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 0 20px 32px; font-size: 14px; line-height: 1.6; color: #525355;" align="left" valign="top">
+                        <p style="margin: 0 0 4px 0">Please refer below for the English version of the onboarding steps.</p>
+                        <p style="margin: 0;">请参阅下方的英文版步骤说明。</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <!-- Footer Banner -->
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px">
+                  <tbody>
+                    <tr>
+                      <td colspan="2" align="center" valign="top">
+                        <a href="https://www.sc.com/en/" target="_blank">
+                          <img
+                            src="{{arrow.bottom}}"
+                            width="100%" style="padding: 0; border: none; display: block" border="0" />
+                        </a>
+                      </td>
+                    </tr>
+                    <tr style="background-color: #e4e4e5">
+                      <td colspan="2" align="left" valign="top">
+                        <div style="font-size: 12px; padding-top: 20px; padding-right: 20px; padding-left: 20px;">
+                          <p><b>Disclaimer</b></p>
+                          <p>This is a system-generated e-mail and does not require an authorised signature. Please do not reply to the sender of this e-mail. If you have any queries, please contact your Private Banker.</p>
+                          <p>Please note that Standard Chartered Bank will never ask you for your account details. To learn more on how you can avoid online fraud please visit our website on online security tips at <a href="https://www.sc.com/global/security-tips" target="_blank">sc.com/global/security-tips</a>.</p>
+                          <p>It is important that you update us of any changes to your contact information so that you can continue to receive notices and communications from us. If there are any changes to your contact information, please inform your Private Banker.</p>
+                          <p>Please refer to <a href="https://www.sc.com/en/privacy-policy" target="_blank">sc.com/en/privacy-policy</a> for Standard Chartered Bank's Privacy Policy.</p>
+                        </div>
+                        <div style="font-size: 12px; padding-top: 20px; padding-right: 20px; padding-left: 20px;">
+                          <p><b>免责声明</b></p>
+                          <p>此邮件为系统自动发送，无需授权签名。请勿回复此邮件。如有任何疑问，请联系您的私人银行专员。</p>
+                          <p>请注意，渣打银行绝不会向您索取账户信息。欲了解更多防范网络诈骗的方式，请访问我们的官网 <a href="https://www.sc.com/global/security-tips" target="_blank">sc.com/global/security-tips</a> 了解更多网络安全提示。</p>
+                          <p>为确保您能够持续收到我们的通知与信息，请及时更新您的联系方式。如有变更，请通知您的私人银行专员。</p>
+                          <p>有关渣打银行的隐私政策，请参阅 <a href="https://www.sc.com/en/privacy-policy" target="_blank">sc.com/en/privacy-policy</a>。</p>
+                          <div style="padding-top: 20px"></div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+
+</html>

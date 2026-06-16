@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Invitation from LeapXpert</title>
+  <style type="text/css">
+    @media only screen and (max-width: 600px) {
+      .wrapper {
+        width: 95% !important;
+      }
+    }
+
+    .email-content {
+      width: 546px;
+      height: 431px;
+      font-family: Helvetica Neue;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      line-height: 16px;
+      letter-spacing: 0.5px;
+      text-align: left;
+      color: #212e3d;
+      border-radius: 8px;
+      padding: 50px 15px;
+    }
+
+    .email-line {
+      padding-top: 25px;
+    }
+
+    .email-name {
+      font-weight: bold;
+      line-height: 1.44;
+    }
+
+    .email-username {
+      font-weight: bold;
+      color: #54bbe1;
+    }
+
+    .email-am {
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: normal;
+    }
+
+    .column {
+  	  float: left;
+      padding: 5px;
+	  }
+
+	  .row::after {
+  	  content: "";
+  	  clear: both;
+      display: table
+	  }
+
+    .install {
+      display: flex;
+    }
+
+    .install .item {
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body style="margin:0; padding:0; background-color:#FFFFFF; font-family: Helvetica Neue;">
+<center>
+
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td class="email-content" align="center" height="100%" valign="top" width="100%"
+          bgcolor="#f9fafc" class="wrapper">
+        <!--[if (gte mso 9)|(IE)]>
+        <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+          <tr>
+            <td align="center" valign="top" width="600">
+        <![endif]-->
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"
+               style="max-width:546px;">
+          <tr class="hide-preview">
+            <td align="center" valign="top" style="padding-bottom: 35px">
+              <img src="{{header.logo}}" width="" height="70px"
+                   style="margin:0; padding:0; border:none; display:block;" border="0"/>
+            </td>
+          </tr>
+          <tr>
+            <td class="email-name email-line" align="left" valign="top">
+              Dear {{recipient.firstName}} {{recipient.lastName}},
+            </td>
+          </tr>
+          {{#invitation.content}}
+          <tr>
+            <td class="email-line" align="left" valign="top">
+              {{{invitation.content}}}
+            </td>
+          </tr>
+          {{/invitation.content}}
+          <tr>
+            <td class="email-line" align="left" valign="top">
+              Welcome to LeapXpert!
+            </td>
+          </tr>
+          <tr>
+            <td class="email-line" align="left" valign="top">
+              We’ve created a company employee account for you to start using LeapXpert.
+            </td>
+          </tr>
+          <tr>
+            <td class="email-line" align="left" valign="top">
+              LeapXpert ensures client conversations conducted over consumer messaging apps and voice channels are safe and compliant. Our platform captures, secures and archives client conversations over messaging channels like WhatsApp, iMessage, SMS, WeChat and others, for regulatory compliance and strict data governance.
+            </td>
+          </tr>
+          {{#recipient.isInviteWeb}}
+          <tr>
+            <td class="email-line" align="left" valign="top">
+              To access our Leap Work desktop web app, please use the following link: <a href="{{company.login}}">{{company.login}}</a>
+            </td>
+          </tr>
+          {{/recipient.isInviteWeb}}
+          {{#recipient.isInviteMobile}}
+          <tr>
+            <td class="email-line" align="left" valign="top">
+              To install the Leap Work mobile app, please check your official application store.
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="email-line column" align="left" valign="top">
+              <a href="{{iosURLForAM}}" target="_blank" >
+                <img src="{{apple.logo}}" width="150px" style="margin:0; padding:0; border:none; display:block;" border="0"/>
+              </a>
+            </td>
+            <td class="email-line column" align="left" valign="top">
+              <a href="{{androidURLForAM}}" target="_blank" >
+                <img src="{{google.logo}}" width="150px" style="margin:0; padding:0; border:none; display:block;" border="0"/>
+              </a>
+            </td>
+          </tr>
+          {{/recipient.isInviteMobile}}
+          {{#recipient.isInviteOrgAdmin}}
+          <tr>
+            <td class="email-line" align="left" valign="top">
+              To access the administration portal for your company, please use the following link: <a href="{{company.loginOrgAdmin}}">{{company.loginOrgAdmin}}</a>
+            </td>
+          </tr>
+          {{/recipient.isInviteOrgAdmin}}
+          {{#recipient.isShowCredentials}}
+          <tr>
+            <td class="email-line" align="left" valign="top">
+              <li><b>  Username: </b> {{recipient.name}} </li>
+            </td>
+          </tr>
+          <tr>
+            <td class="email-line-small-distance" align="left" valign="top">
+              <li><b>Password: </b> {{password}} </li>
+            </td>
+          </tr>
+          <tr>
+            <td class="email-line-small-distance" align="left" valign="top">
+              <li><b>Company: </b> {{company.name}} </li>
+            </td>
+          </tr>
+          <tr>
+            <td class="email-line-small-distance" align="left" valign="top">
+              {{#recipient.otp.emailDelivery}}
+              <li><b>OTP: </b> You will receive an OTP sent to your email address</li>
+              {{/recipient.otp.emailDelivery}}
+
+              {{#recipient.otp.smsDelivery}}
+              <li><b>OTP: </b> You will receive an OTP sent to your phone number</li>
+              {{/recipient.otp.smsDelivery}}
+            </td>
+          </tr>
+          {{/recipient.isShowCredentials}}
+          <tr>
+            <td class="email-line" align="left" valign="top">
+              We're excited to have you on board with us, and we look forward to helping you make the most of the service. For any questions, please contact LeapXpert's customer success team at <a href="https://support.leap.expert/">https://support.leap.expert/</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="email-line" align="left" valign="top">
+              Your sincerely,
+            </td>
+          </tr>
+          <tr>
+            <td class="email-line" align="left" valign="top">
+              On behalf of <b>{{sender.firstName}}</b> <b>{{sender.lastName}}</b> from <b>{{company.fullName}}</b>
+            </td>
+          </tr>
+          <tr>
+            <td class="email-line" align="left" valign="top">
+              The LeapXpert Team
+            </td>
+          </tr>
+        </table>
+        <!--[if (gte mso 9)|(IE)]>
+        </td>
+        </tr>
+        </table>
+        <![endif]-->
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center" height="100%" valign="top" width="100%">
+        <!--[if (gte mso 9)|(IE)]>
+        <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+          <tr>
+            <td align="center" valign="top" width="600">
+        <![endif]-->
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff" class="hide-preview">
+          <tr>
+            <td class="email-line" align="center" valign="top" style="font-size:14px; color: #0065FF;letter-spacing: 0.5px;font-family: Helvetica Neue;">
+              <span style="font-weight: bold; color: #0065FF;">Powered by LeapXpert</span>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" valign="top" style="font-size:14px; color: #000000;letter-spacing: 0.5px;line-height: 1.5;font-family: Helvetica Neue; padding-bottom: 15px" >
+            </td>
+          </tr>
+          <tr>
+            <td align="center" valign="top" style="line-height: 2.5">
+              <a href="{{twitter.link}}" style="text-decoration:none;">
+                <img src="{{twitter.logo}}" width="30px" border="0"/>
+              </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="{{linkedin.link}}" style="text-decoration:none;">
+                <img src="{{linkedin.logo}}" width="30px" border="0"/>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" valign="top" style="font-size:14px; color: #000000;letter-spacing: 0.5px;line-height: 1.5;font-family: Helvetica Neue;" >
+              <span>This is an auto-generated email, please do not reply.</span>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" valign="top" style="font-size:14px; color: #79818a;letter-spacing: 0.5px;line-height: 1.5;font-family: Helvetica Neue;" >
+              <u>
+                <a href="http://www.leap.expert" target="_blank" style="letter-spacing: normal; text-decoration: none; color: #27adec;">www.leap.expert</a>
+              </u>
+            </td>
+          </tr>
+        </table>
+        <!--[if (gte mso 9)|(IE)]>
+        </td>
+        </tr>
+        </table>
+        <![endif]-->
+      </td>
+    </tr>
+  </table>
+</center>
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+ExternalCompanyID,ExternalCompanyName,ParentExternalCompanyName,Description
+ID1,Alphabet,,This is a short description
+ID2,Google,Alphabet,This is a short description
+ID3,Pepsi,,This is a short description
+ID4,Coca Cola,,This is a short description

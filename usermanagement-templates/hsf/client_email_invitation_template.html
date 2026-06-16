@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Invitation</title>
+  <style type="text/css">
+    @media only screen and (max-width: 600px) {
+      .wrapper {
+        width: 95% !important;
+      }
+    }
+
+    .email-content {
+      width: 546px;
+      height: 431px;
+      font-family: Gotham;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5;
+      letter-spacing: 0.5px;
+      text-align: left;
+      color: #212e3d;
+      border-radius: 8px;
+      padding: 50px 15px;
+    }
+
+    .email-line {
+      padding-top: 25px;
+    }
+
+    .email-name {
+      font-weight: bold;
+      line-height: 1.44;
+    }
+
+    .email-username {
+      font-weight: bold;
+      color: #54bbe1;
+    }
+
+    .email-am {
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: normal;
+    }
+  </style>
+</head>
+
+<body style="margin:0; padding:0; background-color:#FFFFFF; font-family: Gotham;">
+<center>
+
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td class="email-content" align="center" height="100%" valign="top" width="100%" bgcolor="#f9fafc" class="wrapper">
+        <!--[if (gte mso 9)|(IE)]>
+        <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+          <tr>
+            <td align="center" valign="top" width="600">
+        <![endif]-->
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:546px;">
+          <tr>
+            <td align="center" valign="top" style="padding-bottom: 35px">
+              <img src="{{header.logo}}" width="" height="70px" style="margin:0; padding:0; border:none; display:block;" border="0" />
+            </td>
+          </tr>
+          <tr>
+            <td class="email-name email-line" align="left" valign="top">
+              Dear {{recipient.name}},
+            </td>
+          </tr>
+          <tr>
+            <td class="email-line" align="left" valign="top">
+              Please accept this invitation to LeapXpert, a platform that enables us to communicate with yourself, over multiple channels.
+            </td>
+          </tr>
+          <tr>
+            <td class="email-line" align="left" valign="top">
+              To install the IOS Mobile App: You will need to go to the AppStore and install the iOS app called TestFlight app. Please follow this link:
+              <a href="{{iosURLForCL}}" target="_blank">
+                {{iosURLForCL}}
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="email-line" align="left" valign="top">
+              To install the Android Mobile App
+              <a href="{{androidURLForCL}}" target="_blank">
+                {{androidURLForCL}}
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="email-line" align="left" valign="top">
+              You can log in with your assigned name:
+              <span class="email-username">{{recipient.name}}</span>
+            </td>
+          </tr>
+          <tr>
+            <td align="left" valign="top">
+              Please contact me directly for your temporary log-in password.
+            </td>
+          </tr>
+          <tr>
+            <td class="email-line" align="center" valign="top">
+              <hr style="background-color: #dce7f0; border-radius: 3px; max-width: 540px; height: 1px; border: solid 1px #dce7f0;">
+            </td>
+          </tr>
+          <tr>
+            <td class="email-line" align="left" valign="top">
+              Yours sincerely,
+            </td>
+          </tr>
+          <tr>
+            <td class="email-name email-line" align="left" valign="top">
+              {{sender.firstName}} {{sender.lastName}}
+            </td>
+          </tr>
+        </table>
+        <!--[if (gte mso 9)|(IE)]>
+        </td>
+        </tr>
+        </table>
+        <![endif]-->
+      </td>
+    </tr>
+
+    <tr>
+      <td align="center" height="100%" valign="top" width="100%">
+        <!--[if (gte mso 9)|(IE)]>
+        <table align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+          <tr>
+            <td align="center" valign="top" width="600">
+        <![endif]-->
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff">
+          <tr>
+            <td class="email-line" align="center" valign="top" style="font-size:14px; color: #79818a;letter-spacing: 0.5px;line-height: 2.5;font-family: Gotham;">
+              Powered by
+              <span style="font-weight: bold;">LeapXpert</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+              <a href="http://www.leap.expert" target="_blank" style="letter-spacing: normal; text-decoration: none; color: #79818a;">www.leap.expert</a>
+            </td>
+          </tr>
+        </table>
+        <!--[if (gte mso 9)|(IE)]>
+        </td>
+        </tr>
+        </table>
+        <![endif]-->
+      </td>
+    </tr>
+</center>
+</table>
+</body>
+
+</html>

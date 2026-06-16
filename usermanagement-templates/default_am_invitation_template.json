@@ -1,0 +1,14 @@
+[
+  {
+    "companyId": "",
+    "name": "invitation",
+    "language": "en",
+    "template": "<p>Hello {{new_manager_name}},</p>\n<p>{{input_content}}</p>\n<p>To login, go to: {{login_url}}</p>\n<p>Your username: {{new_manager_username}}</p>\n<p>Use this temporary password to login for the first time: {{temporary_password}}</p>\n<hr>\n<p>Kind regards,</p>\n<p>{{admin_username}}</p>\n<p>Admin.</p>"
+  },
+  {
+    "companyId": "",
+    "name": "invitation-sso",
+    "language": "en",
+    "template": "<p>Hello {{new_manager_name}},</p>\n<p>{{input_content}}</p>\n<p>To login, go to: {{login_url}}</p>\n<p>Please use your organization account to log in.</p>\n<hr>\n<p>Kind regards,</p>\n<p>{{admin_username}}</p>\n<p>Admin.</p>"
+  }
+]
